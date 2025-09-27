@@ -1,21 +1,70 @@
 ﻿/* @import url("temas-colores-fuentes.css"); */
 
 #encabezado-principal {
-   background-color: red;
-   color: white;
+   background-color: #ffff;
+   display: flex;
+}
+
+#encabezado-secundario{
+   font-family: "Cinzel";
+   font-weight: bold;
+}
+
+.logo img {
+   flex: 1;
+   position: relative;
+   width: 8em;
+   height: auto;
+}
+
+.buscador {
+   flex: 1;
+   padding-right: 2em;
+}
+
+.buscador input {
+   width: 100%;
+   padding: 8px;
+   border-radius: 10px;
+   border: 1px solid #ccc;
+}
+
+.iconos span {
+   margin-left: 15px;
+   font-size: 22px;
+   cursor: pointer;
 }
 
 #navegacion-categoria {
-   background-color: lime;
+   display: flex;
+   width: 100%;
+   background-color: #DC121B;
+   justify-content: space-evenly;
+   border-radius: 10px;
+   
+}
+
+.tab-categoria {
+   color: #0a122a;
+  font-family: "Rajdhani";
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 #seccion-categoria {
    min-height: 720px;
-   background-color: orange;
+   background-color: #c9c5ba;
+   font-family: "Cinzel";
+   font-weight: bold;
+   
 }
+
+
 
 .articulo-categoria {
    border: solid 3px gray;
+   
 }
 
 #footer-principal {
@@ -24,6 +73,6 @@
 }
 
 #qr-code {
-   width:100px;
-   height:100px;
+   width: 100px;
+   height: 100px;
 }
