@@ -1,4 +1,4 @@
-﻿/* @import url("temas-colores-fuentes.css"); */
+﻿@import url("temas-colores-fuentes.css"); 
 
 *{
    /*border: solid;*/
@@ -46,16 +46,25 @@
    background-color: #DC121B;
    justify-content: space-evenly;
    border-radius: 10px;
-   
+   text-align: center;
 }
 
 .tab-categoria {
+<<<<<<< HEAD
    color: #0a122a;
    font-family: "Rajdhani";
    font-size: 30px;
    font-weight: bold;
    text-decoration: none;
    
+=======
+  color: #0a122a;
+  font-family: "Rajdhani";
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100%;
+>>>>>>> prueba_login
 }
 
 #seccion-categoria {
@@ -66,12 +75,15 @@
    
 }
 
+<<<<<<< HEAD
 .item-valor-portada{
    width: 100%;
    max-width: 300px;
    max-height: 500px;
 }
 
+=======
+>>>>>>> prueba_login
 .articulo-categoria {
    border: solid 3px gray;
    
@@ -88,4 +100,8 @@
 #qr-code {
    width: 100px;
    height: 100px;
+}
+
+.tab-categoria:hover {
+   background-color: blue;
 }
