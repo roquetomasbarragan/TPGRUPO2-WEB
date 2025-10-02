@@ -55,21 +55,12 @@
 }
 
 .tab-categoria {
-<<<<<<< HEAD
-   color: #0a122a;
-   font-family: "Rajdhani";
-   font-size: 30px;
-   font-weight: bold;
-   text-decoration: none;
-   
-=======
   color: #0a122a;
   font-family: "Rajdhani";
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
   width: 100%;
->>>>>>> prueba_login
 }
 
 
@@ -114,15 +105,12 @@
 
 
 
-<<<<<<< HEAD
 .item-valor-portada{
    width: 100%;
    max-width: 300px;
    max-height: 500px;
 }
 
-=======
->>>>>>> prueba_login
 .articulo-categoria {
    border: solid 3px gray;
    
