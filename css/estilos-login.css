@@ -3,59 +3,100 @@
 
 * {
     margin: auto;
+    background-color: #414141;
 }
 
 #login {
-    margin-top: 150px;
-    border: 2px solid #000;
+    margin-top: 130px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     width: 350px;
     height: 400px;
+    background-color: #222222;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
+form {
+    background-color: #222222;
+}
+
+a {
+    background-color: #222222;
+    color: #fff;
+    text-decoration: none;
+}
+
 h1{
     position: relative;
+    color: #fff;
     font-family: "Cinzel";
+    background-color: #222222;
+
 }
 
 .input-from {
     margin-bottom: 1.5em;
+        background-color: #222222;
+
 }
 
 .input-texto {
+    background-color: #222222;
+    color: #fff;
+    border-radius: 1.3em;
+    border: 1px solid #ffff;
     width: 350px;
     padding: 8px;
 
 }
 
+.input-texto:hover {
+    border: 1px solid #4E8AE9;
+}
+
+
 .recuperar-contrasena {
     position: relative;
     bottom: 15px;
+    background-color: #222222;
+
 }
 
 .boton {
     margin: 20px;
+    background-color: #222222;
+
 }
 
 .input-boton{
     width: 100%;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 39px;
     color: #fff;
-    background-color: #1A51DB;
+    background-color: #4E8AE9;
     font-family: "Cinzel";
 }
 
 .registrate {
     text-align: center;
+    background-color: #222222;
+}
+
+.registrate span {
+    background-color: #222222;
+    color: #4E8AE9;
+}
+
+.condiciones label {
+    background-color: #222222;
+    color: #fff;
 }
 
 .condiciones {
     position: relative;
     top: 20px;
+    background-color: #222222;
 }

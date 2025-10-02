@@ -41,15 +41,16 @@
    background-color: #DC121B;
    justify-content: space-evenly;
    border-radius: 10px;
-   
+   text-align: center;
 }
 
 .tab-categoria {
-   color: #0a122a;
+  color: #0a122a;
   font-family: "Rajdhani";
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
+  width: 100%;
 }
 
 #seccion-categoria {
@@ -59,8 +60,6 @@
    font-weight: bold;
    
 }
-
-
 
 .articulo-categoria {
    border: solid 3px gray;
@@ -75,4 +74,8 @@
 #qr-code {
    width: 100px;
    height: 100px;
+}
+
+.tab-categoria:hover {
+   background-color: blue;
 }
