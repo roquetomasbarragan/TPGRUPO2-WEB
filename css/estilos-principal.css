@@ -1,4 +1,4 @@
-﻿/* @import url("temas-colores-fuentes.css"); */
+﻿@import url("temas-colores-fuentes.css"); 
 
 #encabezado-principal {
    background-color: #ffff;

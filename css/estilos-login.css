@@ -1,1 +1,61 @@
 ﻿/* estilos-login.css */
+@import url("temas-colores-fuentes.css");
+
+* {
+    margin: auto;
+}
+
+#login {
+    margin-top: 150px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    position: relative;
+    font-family: "Cinzel";
+}
+
+.input-from {
+    margin-bottom: 1.5em;
+}
+
+.input-texto {
+    width: 350px;
+    padding: 8px;
+
+}
+
+.recuperar-contrasena {
+    position: relative;
+    bottom: 15px;
+}
+
+.boton {
+    margin: 20px;
+}
+
+.input-boton{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #1A51DB;
+    font-family: "Cinzel";
+}
+
+.registrate {
+    text-align: center;
+}
+
+.condiciones {
+    position: relative;
+    top: 20px;
+}
