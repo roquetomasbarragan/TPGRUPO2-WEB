@@ -3,11 +3,13 @@
 *{
    /*border: solid;*/
    margin: 0;
+   
 }
 
 #encabezado-principal {
    background-color: #ffff;
    display: flex;
+   
 }
 
 #encabezado-secundario{
@@ -25,6 +27,7 @@
 .buscador {
    flex: 1;
    padding-right: 2em;
+  
 }
 
 .buscador input {
@@ -32,12 +35,14 @@
    padding: 8px;
    border-radius: 10px;
    border: 1px solid #ccc;
+   
 }
 
 .iconos span {
-   margin-left: 15px;
+   margin-top: 20px;
    font-size: 22px;
    cursor: pointer;
+  
 }
 
 #navegacion-categoria {
@@ -67,13 +72,47 @@
 >>>>>>> prueba_login
 }
 
+
+#seccion-filtros{
+   display: grid;
+   grid-template: repeat(3, 1fr);
+   gap: 20px;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+   
+}
+
 #seccion-categoria {
-   min-height: 720px;
+   display: grid;
    background-color: #c9c5ba;
    font-family: "Cinzel";
    font-weight: bold;
-   
+   grid-template-columns: repeat(3,1fr);
+   gap: 30px;
+   max-width: 1200px;
+   margin: 30px auto;
+   padding: 20px;
+   border-color: #4E8AE9;
 }
+
+.articulo-categoria{
+   padding: 15px;
+   background-color: #222222;
+   border: 1px solid #4E8AE9;
+   border-radius: 8px;
+   text-align: center;
+   color: #ffff;
+}
+
+.articulo-categoria img{
+   width: 100%;
+   height: auto;
+   display: block;
+   margin-bottom: 10px;
+}
+
+
 
 <<<<<<< HEAD
 .item-valor-portada{
