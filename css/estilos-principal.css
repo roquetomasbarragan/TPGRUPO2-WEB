@@ -1,5 +1,10 @@
 ﻿/* @import url("temas-colores-fuentes.css"); */
 
+*{
+   /*border: solid;*/
+   margin: 0;
+}
+
 #encabezado-principal {
    background-color: #ffff;
    display: flex;
@@ -46,10 +51,11 @@
 
 .tab-categoria {
    color: #0a122a;
-  font-family: "Rajdhani";
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
+   font-family: "Rajdhani";
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+   
 }
 
 #seccion-categoria {
@@ -60,7 +66,11 @@
    
 }
 
-
+.item-valor-portada{
+   width: 100%;
+   max-width: 300px;
+   max-height: 500px;
+}
 
 .articulo-categoria {
    border: solid 3px gray;
@@ -70,6 +80,9 @@
 #footer-principal {
    background-color: blue;
    color: white;
+   display: flex;
+   justify-content: space-between;
+   padding: 2em;
 }
 
 #qr-code {
