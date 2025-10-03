@@ -1,11 +1,39 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <link rel="stylesheet" href="../css/estilos-registrarse.css">
+   <title>Registrarse</title>
 </head>
+
 <body>
-   
+   <section id="registrarse">
+      <h1>Registrarse</h1>
+      <form method="post">
+         <!--correo y contrasenia-->
+         <div class="input-form">
+            <input type="email" class="input-texto" placeholder="Correo">
+         </div>
+         <div class="input-form">
+            <input type="password" class="input-texto" placeholder="Contrasena">
+         </div>
+         <!--Boton inicio sesion-->
+         <div class="boton">
+            <input type="submit" class="input-boton" value="REGISTRARSE">
+         </div>
+         <!--Registrar usuario-->
+         <div class="iniciar-sesion">
+            <span>¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a></span>
+         </div>
+         <!--Terminos de concion-->
+         <div class="condiciones">
+            <label for="checkbox">Aceptar terminos de condicion</label>
+            <input type="checkbox" id="checkbox">
+         </div>
+      </form>
+   </section>
 </body>
+
 </html>
