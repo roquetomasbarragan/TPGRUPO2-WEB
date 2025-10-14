@@ -3,7 +3,13 @@
 *{
    /*border: solid;*/
    margin: 0;
-   
+   font-family: sans-serif;
+
+}
+
+body {
+     background: linear-gradient(to top, #222222, #3D5A73);
+
 }
 
 #encabezado-principal {
@@ -116,14 +122,6 @@
    
 }
 
-#footer-principal {
-   background-color: blue;
-   color: white;
-   display: flex;
-   justify-content: space-between;
-   padding: 2em;
-}
-
 #qr-code {
    width: 100px;
    height: 100px;
@@ -132,3 +130,77 @@
 .tab-categoria:hover {
    background-color: blue;
 }
+
+#footer-principal {
+   color: white;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   height: 15em;
+}
+
+/* foter derecho */
+
+.lista-informatica, li {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+}
+
+a {
+   text-decoration: none;
+   color: #ffff;
+}
+
+/* foter del centro */
+
+#footer-principal-derecha {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#footer-principal-centro {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+span {
+   position: relative;
+   bottom: 10px;
+   font-weight: bold;
+}
+
+form {
+   margin-bottom: 0.9em;
+}
+
+form, input {
+   padding: 3px;
+}
+
+.iconos-redes-sociales, img {
+   margin: 10px;
+   height: 25px;
+   transition: 0.5s;
+}
+
+.iconos-redes-sociales, img:hover {
+   transform: translateY(10px);
+}
+
+/* foter izquierod */
+
+#footer-principal-izquierda {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo {
+   height: 8.5em;
+}
+
