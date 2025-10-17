@@ -1,0 +1,91 @@
+﻿/* estilos-datos-personales.css */
+@import url("temas-colores-fuentes.css");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d2d2d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor*/
+section {
+  background-color: #111111;
+  padding: 2.5em;
+  border-radius: 4px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+h1, h2 {
+  font-family: "Cinzel";
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.datos-personales{
+  margin-top: 10%;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 2px solid white;
+  border-radius: 25px;
+  background: transparent;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* Menu desplegable del Tipo de documento */
+option {
+  background-color: #2d2d2d;
+}
+
+button,.input-texto {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #4E8AE9;
+  color: white;
+  font-family: "Cinzel";
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover,
+.input-texto:hover {
+  background-color: #3b6fc5;
+}
+
+hr, .separador {
+  border-bottom: 2px solid #444;
+  margin: 20px 0;
+}
+
+p, label {
+  font-family: "Rajdhani";
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #ccc;
+}

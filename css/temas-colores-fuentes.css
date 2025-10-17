@@ -1,0 +1,28 @@
+﻿/* URL Paleta de colores LIGHT: https://coolors.co/0a122a-c9c5ba-97b1a6-698996-407076 */
+/* URL Paleta de colores DARK: https://coolors.co/0a122a-00adb5-935fa7-eeeeee-393e46 */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani');
+@import url('https://fonts.googleapis.com/css2?family=Amethysta');
+
+:root {
+   --light-color-texto: #0a122a;
+   --light-color-fondo: #c9c5ba;
+   --light-color-acento-1: #97b1a6;
+   --light-color-acento-2: #698996;
+   --light-color-acento-3: #407076;
+   --dark-color-texto: #0a122a;
+   --dark-color-fondo: #00adb5;
+   --dark-color-acento-1: #935fa7;
+   --dark-color-acento-2: #eeeeee;
+   --dark-color-acento-3: #393e46;
+}
+
+ .light-theme {
+   color: var(--light-color-texto);
+   background-color: var(--light-color-fondo);
+}
+
+.dark-theme {
+   color: var(--dark-color-texto);
+   background-color: var(--dark-color-fondo);
+}

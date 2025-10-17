@@ -1,0 +1,18 @@
+@media(max-width: 800px){
+    #navegacion-categoria{
+        flex-direction: column;
+    }
+}
+
+
+@media(max-width: 990px){
+    #seccion-categoria{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    #seccion-categoria{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

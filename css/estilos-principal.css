@@ -1,0 +1,158 @@
+﻿@import url("temas-colores-fuentes.css");
+
+* {
+   /*border: solid;*/
+   margin: 0;
+
+}
+
+body {
+   background: linear-gradient(to bottom, #000000);
+}
+
+#encabezado-principal {
+
+   display: flex;
+   gap: 20px;
+   padding: 0 20px;
+   background: radial-gradient(#4E8AE9, #000000, #000000);
+
+
+}
+
+.titulo-principal {
+   font-family: "Cinzel";
+   color: white;
+   margin: 10px;
+   padding: 0 20px;
+}
+
+#encabezado-secundario {
+   font-family: "Cinzel";
+   font-weight: bold;
+}
+
+.logo img {
+
+
+   width: 100px;
+   height: auto;
+   margin: 10px;
+   object-fit: cover;
+}
+
+.buscador {
+   width: 100%;
+   height: auto;
+   padding: 20px;
+
+}
+
+.buscador input {
+   width: 100%;
+   padding: 8px;
+   border-radius: 10px;
+   border: 1px solid #ccc;
+
+}
+
+.iconos {
+   display: flex;
+   gap: 20px;
+   margin: 20px;
+   font-size: 20px;
+   cursor: pointer;
+
+}
+
+#navegacion-categoria {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   align-items: center;
+   padding: 0 20px;
+
+
+}
+
+.tab-categoria {
+
+   font-family: "Rajdhani";
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+   width: 200px;
+   text-align: center;
+   border: 2px solid black;
+   border-radius: 8px;
+   color: rgb(238, 238, 238);
+   background: linear-gradient(to top, #4E8AE9, rgb(26, 25, 25));
+   padding: 0 20px;
+   border: 1px solid gray;
+   transition: 2s ease;
+}
+
+.tab-categoria:focus {
+   width: 400px;
+   font-size: 40px;
+   color: #4E8AE9;
+   border: 3px solid #4E8AE9;
+   background: linear-gradient(to left, gray, rgb(34, 30, 30));
+}
+
+
+#seccion-filtros {
+   display: grid;
+   padding: 20px;
+}
+
+#seccion-categoria {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 40px;
+   padding: 0 20px;
+
+}
+
+.articulo-categoria {
+   padding: 15px;
+   background: linear-gradient(to top, #4E8AE9, #222222);
+   border: 1px solid #4E8AE9;
+   border-radius: 8px;
+   text-align: center;
+   color: #ffff;
+
+}
+
+.articulo-categoria img {
+   width: 100%;
+   height: auto;
+   aspect-ratio: 1/1;
+   object-fit: cover;
+}
+
+
+
+
+
+.articulo-categoria {
+   border: solid 3px gray;
+
+}
+
+#footer-principal {
+   background-color: blue;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   padding: 2em;
+}
+
+#qr-code {
+   width: 100px;
+   height: 100px;
+}
+
+.tab-categoria:hover {
+   background-color: blue;
+}
