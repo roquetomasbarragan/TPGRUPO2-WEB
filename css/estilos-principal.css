@@ -118,27 +118,48 @@ body {
    padding: 15px;
    background: linear-gradient(to top, #4E8AE9, #222222);
    border: 1px solid #4E8AE9;
-   border-radius: 8px;
+   border-radius: 20px;
    text-align: center;
    color: #ffff;
+   box-shadow: 0 0 3px;
 
+}
+
+.articulo-categoria:hover {
+   border: 1px solid;
+   
+   box-shadow: 0 0 20px #4E8AE9;
 }
 
 .articulo-categoria img {
    width: 100%;
    height: auto;
    aspect-ratio: 1/1;
-   object-fit: cover;
+   object-fit: contain;
 }
 
 
+
+.header-articulo p{
+   font-family: "Cinzel";
+   font-weight: bold;
+   font-size: 20px;
+   padding: 10px;
+}
 
 
 
 .articulo-categoria {
-   border: solid 3px gray;
+   border: solid 2px rgb(112, 107, 107);
 
 }
+
+ .detalle-articulo h4{
+   color: #000000;
+   font-size: 20px;
+}
+
+
 
 #footer-principal {
    background-color: blue;
