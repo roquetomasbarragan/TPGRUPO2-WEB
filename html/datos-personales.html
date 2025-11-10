@@ -11,60 +11,60 @@
 </head>
 
 <body>
-   <main>
-      <section>
-         <div>
-            <h1>Mi usuario</h1>
-            <br>
-            <div class="separador"></div><br>
-            <form>
-               <label for="correo">Email principal</label>
-               <br>
-               <input type="email" id="correo" name="correo" placeholder="@gmail.com" required>
-               <br>
-               <button type="submit" class="input-texto">GUARDAR CAMBIOS</button>
-            </form>
-            <br>
-            <div class="separador"></div><br>
-            <label for="password">Contraseña</label>
-            <br>
-            <input type="password" id="password" placeholder="**********">
-            <button id="toggleBtn" class="input-texto">CAMBIAR</button>
-         </div>
+   <section>
+      <div>
+         <h1>Mi usuario</h1>
          <br>
-         <hr><br>
-         <div>
-            <h1 class="datos-personales">Datos personales</h1>
+         <div class="separador"></div><br>
+         <form id="form-correo">
+            <label for="correo">Email principal</label>
             <br>
-            <div class="separador"></div><br>
-            <form>
-               <label for="nombre">Nombre</label>
-               <input type="text" id="nombre" name="nombre" required>
-               <label for="apellido">Apellido</label>
-               <input type="text" id="apellido" name="apellido" required>
-               <br>
-               <label for="tipo-doc">Tipo de documento</label>
-               <select id="tipo-doc" name="tipo-doc" required>
-                  <option value="selecionar">Seleccionar</option>
-                  <option value="dni">DNI</option>
-                  <option value="pasaporte">Pasaporte</option>
-                  <option value="otro">Otro</option>
-               </select>
-               <label for="numero-doc">Número de documento</label>
-               <input type="text" id="numero-doc" name="numero-doc" required>
-               <label for="fecha-nac">Fecha de nacimiento</label>
-               <input type="date" id="fecha-nac" name="fecha-nac" required>
-               <br>
-               <label for="telefono">Teléfono celular</label>
-               <input type="tel" id="telefono" name="telefono" placeholder="" required>
-               <label for="email-sec">Email secundario</label>
-               <input type="email" id="email-sec" name="email-sec" placeholder="@gmail.com">
-               <br>
-               <button type="submit" class="input-texto">GUARDAR CAMBIOS</button>
-            </form>
-         </div>
-      </section>
-   </main>
+            <input type="email" id="correo" name="correo" placeholder="@gmail.com" required>
+            <br>
+            <button type="submit" id="btn-guardar-datos" class="input-texto">GUARDAR CAMBIOS</button>
+         </form>
+         <br>
+         <div class="separador"></div><br>
+         <label for="password">Contraseña</label>
+         <br>
+         <input type="password" id="password" placeholder="**********">
+         <button id="toggleBtn" class="input-texto">CAMBIAR</button>
+      </div>
+      <br>
+      <hr><br>
+      <div>
+         <h1 class="datos-personales">Datos personales</h1>
+         <br>
+         <div class="separador"></div><br>
+         <form id="form-datos-personales">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br>
+            <label for="tipo-doc">Tipo de documento</label>
+            <select id="tipo-doc" name="tipo-doc" required>
+               <option value="seleccionar">Seleccionar</option>
+               <option value="dni">DNI</option>
+               <option value="pasaporte">CI</option>
+               <option value="otro">Pasaporte</option>
+            </select>
+            <label for="numero-doc">Número de documento</label>
+            <input type="text" id="numero-doc" name="numero-doc" required>
+            <label for="fecha-nac">Fecha de nacimiento</label>
+            <input type="date" id="fecha-nac" name="fecha-nac" required>
+            <br>
+            <label for="telefono">Teléfono celular</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="" required>
+            <label for="email-sec">Email secundario</label>
+            <input type="email" id="email-sec" name="email-sec" placeholder="@gmail.com">
+            <br>
+            <button type="submit" class="input-texto">GUARDAR CAMBIOS</button>
+         </form>
+      </div>
+   </section>
+
+   <script type="module" src="../js/datos-personales.js"></script>
 </body>
 
 </html>
