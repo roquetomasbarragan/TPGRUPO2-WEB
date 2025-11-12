@@ -2,6 +2,12 @@
     #navegacion-categoria{
         flex-direction: column;
     }
+
+    #footer-principal {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 

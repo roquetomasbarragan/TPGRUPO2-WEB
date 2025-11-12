@@ -177,3 +177,63 @@ body {
 .tab-categoria:hover {
    background-color: blue;
 }
+
+/* footer de la pagina */
+#footer-principal {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   background: white;
+   padding: 10px;
+   margin-top: 20px;
+   background: linear-gradient(to bottom, #000000);
+}
+
+#footer-principal-izquierda img{
+   width: 17em;
+}
+
+#footer-principal-izquierda {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: center;
+   margin: auto;
+   color: white;
+}
+
+#footer-principal-centro {
+   text-align: center;
+   margin: auto;
+}
+
+.logos img {
+   transition: 0.5s;
+}
+
+.logos {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   margin-top: 15px;
+}
+
+.logos img:hover {
+   transform: translateY(10px);
+}
+
+#footer-principal-centro img{   
+   width: 35px;
+}
+
+#footer-principal-derecha {
+   justify-content: center;
+   margin: auto;
+}
+
+#footer-principal-derecha ul{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 10px;
+   color: white;
+}
