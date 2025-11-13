@@ -1,9 +1,16 @@
 ﻿/* estilos-login.css */
 @import url("temas-colores-fuentes.css");
 
-* {
-    margin: auto;
+body {
     background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#registrarse, #login {
+    margin: 0; 
 }
 
 #login {
