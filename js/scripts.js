@@ -1,24 +1,26 @@
 
 // BUSCADOR
-
 const buscador = document.getElementById("busqueda");
 const articulos = document.querySelectorAll(".articulo-categoria");
+
+
 
 buscador.addEventListener("input", () => {
     const texto = buscador.value.toLowerCase().trim();
 
     articulos.forEach(articulo => {
+
         const nombre = articulo.querySelector(".item-valor-nombre").textContent.toLowerCase();
 
-        // si tiene menos de 3 letras muestra todos normal
-        if (texto.length < 3) {
+        if(texto.length < 3){
             articulo.style.display = "block";
         } else {
-            //  si el nombre contiene el texto ,mostrarlo, si no ocultarrlo
             articulo.style.display = nombre.includes(texto) ? "block" : "none";
         }
-    });
-});
+
+    })
+}
+)
 
 // FIN BUSCADOR
 
@@ -78,3 +80,40 @@ tabs.forEach(tab => {
 });
 // FIN MENU NAVEGACION EVENTOS
 
+// CARROUSELL DE IMGS
+
+const carousel = document.querySelector('.carousel-images');
+const caption = document.querySelector('.carousel-caption');
+const images = document.querySelectorAll('.carousel img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+
+// Mostrar nombre inicial
+caption.textContent = images[0].dataset.nombre;
+
+function mostrarImagen() {
+  carousel.style.transform = `translateX(${-index * 100}%)`;
+  caption.textContent = images[index].dataset.nombre;
+}
+
+function siguiente() {
+  index = (index + 1) % images.length;
+  mostrarImagen();
+}
+
+function anterior() {
+  index = (index - 1 + images.length) % images.length;
+  mostrarImagen();
+}
+
+// Eventos de botones
+nextBtn.addEventListener('click', siguiente);
+prevBtn.addEventListener('click', anterior);
+
+// Cambio automático cada 3s
+setInterval(siguiente, 4000);
+
+
+//fin carrousel//
