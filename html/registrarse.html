@@ -14,14 +14,14 @@
       <form method="post">
          <!--correo y contrasenia-->
          <div class="input-form">
-            <input type="email" class="input-texto" placeholder="Correo">
+            <input type="email" class="input-texto" id="correo" placeholder="Correo">
          </div>
          <div class="input-form">
-            <input type="password" class="input-texto" placeholder="Contrasena">
+            <input type="password" class="input-texto" id="contrasenia" placeholder="Contraseña">
          </div>
          <!--Boton inicio sesion-->
          <div class="boton">
-            <input type="submit" class="input-boton" value="REGISTRARSE">
+            <input type="submit" class="disabled-btn" id="input-boton" value="REGISTRARSE">
          </div>
          <!--Registrar usuario-->
          <div class="iniciar-sesion">
@@ -34,6 +34,8 @@
          </div>
       </form>
    </section>
+
+   <script type="module" src="../js/registrarse.js"></script>
 </body>
 
 </html>
