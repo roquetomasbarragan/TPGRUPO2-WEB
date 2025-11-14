@@ -14,7 +14,7 @@
     height: 400px;
     background-color: #222222;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -43,7 +43,7 @@ h1{
 
 }
 
-.input-texto {
+.input-email {
     background-color: #222222;
     color: #fff;
     border-radius: 1.3em;
@@ -53,10 +53,23 @@ h1{
 
 }
 
-.input-texto:hover {
+.input-contraseña {
+    background-color: #222222;
+    color: #fff;
+    border-radius: 1.3em;
+    border: 1px solid #ffff;
+    width: 350px;
+    padding: 8px;
+
+}
+
+.input-email:hover {
     border: 1px solid #4E8AE9;
 }
 
+.input-contraseña:hover {
+    border: 1px solid #4E8AE9;
+}
 
 .recuperar-contrasena {
     position: relative;
@@ -68,7 +81,7 @@ h1{
 .boton {
     margin: 20px;
     background-color: #222222;
-
+    
 }
 
 .input-boton{
