@@ -80,6 +80,37 @@ tabs.forEach(tab => {
 });
 // FIN MENU NAVEGACION EVENTOS
 
+
+
+// RATING
+// Espera a que todo el DOM esté cargado
+document.addEventListener("DOMContentLoaded", () => {
+    // Selecciona todos los elementos de rating que ya existen en el HTML
+    const ratingElements = document.querySelectorAll(".item-valor-rating");
+
+    // Función para generar estrellas
+    function generarEstrellas(valorRating) {
+        const maxEstrellas = 5;
+        let estrellas = '';
+        for (let i = 0; i < maxEstrellas; i++) {
+            estrellas += i < valorRating ? '★' : '☆';
+        }
+        return estrellas;
+    }
+
+    // Recorre los elementos y reemplaza el número por estrellas
+    ratingElements.forEach(el => {
+        const valor = parseInt(el.textContent); // obtén el número
+        if (!isNaN(valor)) {
+            el.textContent = generarEstrellas(valor); // reemplaza por estrellas
+        }
+    });
+});
+
+
+
+
+
 // CARROUSELL DE IMGS
 
 const carousel = document.querySelector('.carousel-images');
