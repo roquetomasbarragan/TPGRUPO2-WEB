@@ -167,6 +167,14 @@ body {
 
 
 
+.item-valor-rating {
+    color: gold;
+    font-size: 20px;
+/*    background-color: rgba(0, 0, 0, 0.4);*/
+}
+
+
+
 #footer-principal {
    background-color: blue;
    color: white;
