@@ -1,11 +1,11 @@
-﻿/* estilos-registrarse.css */
+﻿
 @import url("temas-colores-fuentes.css");
 
 * {
     margin: auto;
 }
 
-body{
+body {
     background-color: #414141;
 }
 
@@ -14,7 +14,8 @@ body{
     border-radius: 10px;
     padding: 40px;
     width: 350px;
-    height: 400px;
+    height: auto;
+    min-height: 400px;
     background-color: #222222;
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +40,7 @@ h1 {
 .input-form {
     margin-bottom: 1.5em;
     background-color: #222222;
-    
+    width: 100%;
 }
 
 .input-texto {
@@ -50,6 +51,7 @@ h1 {
     width: 350px;
     padding: 8px;
     margin-bottom: 4%;
+    box-sizing: border-box;
 }
 
 .input-texto:hover {
@@ -72,9 +74,9 @@ h1 {
 }
 
 .disabled-btn {
-  background-color: gray !important;
-  cursor: not-allowed;
-  opacity: 0.7;
+    background-color: gray !important;
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
 .iniciar-sesion, span {
@@ -92,4 +94,13 @@ h1 {
     position: relative;
     top: 20px;
     background-color: #222222;
+}
+
+.error-message {
+    width: 100%;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    background-color: #222222;
+    display: block;
 }

@@ -11,17 +11,17 @@
 <body>
    <section id="registrarse">
       <h1>Registrarse</h1>
-      <form method="post">
+      <form method="post" id="formulario-registro">
          <!--correo y contrasenia-->
-         <div class="input-form">
-            <input type="email" class="input-texto" placeholder="Correo">
+         <div class="input-form" >
+            <input type="email" class="input-texto" id="correo" placeholder="Correo">
          </div>
          <div class="input-form">
-            <input type="password" class="input-texto" placeholder="Contrasena">
+            <input type="password" class="input-texto" id="contrasenia" placeholder="Contrasena">
          </div>
          <!--Boton inicio sesion-->
          <div class="boton">
-            <input type="submit" class="input-boton" value="REGISTRARSE">
+            <input type="submit" class="input-boton" id="input-boton" value="REGISTRARSE">
          </div>
          <!--Registrar usuario-->
          <div class="iniciar-sesion">
@@ -34,8 +34,7 @@
          </div>
       </form>
    </section>
-
-   <script type="module" src="../js/registrarse.js"></script>
+   <script src="../js/registrarse.js"></script>
 </body>
 
 </html>
