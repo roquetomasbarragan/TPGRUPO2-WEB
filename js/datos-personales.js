@@ -14,7 +14,7 @@ teléfono 0~9 - + (). Cualquier otro carácter es inválido*/
 
 //inicializacion de const
 const inputCorreo = document.querySelector(".correo");
-const btnGuardar = document.querySelector(".btn-guardar");
+const btnGuardar = document.querySelectorAll(".btn-guardar");
 const inputPassword = document.getElementById("password");
 const inputNombre = document.getElementById("nombre");
 const inputApellido = document.getElementById("apellido");
@@ -23,9 +23,28 @@ const inputNumeroDoc = document.getElementById("numero-doc");
 const inputFechaNac = document.getElementById("fecha-nac");
 const inputTelefono = document.getElementById("telefono");
 
-//inicializacion de let
-btnGuardar.classList.add("disabled-btn");
 let esValido = true;
+
+//btnGuardar.classList.add("disabled-btn");
+function desactivarBtn(btnGuardar){
+
+    let toggleBtn = document.querySelector(".btn-guardar");
+    toggleBtn.classList.add("disabled-btn");
+}
+function activarBtn(btnGuardar){
+
+    let toggleBtn = document.querySelector(".btn-guardar");
+    toggleBtn.classList.remove("disabled-btn");
+}
+function usarBtn(){
+
+    btnGuardar.forEach(btn => {
+        btn.addEventListener("click", guardar.bind(null));
+    });
+}
+
+// Los botones de guardado inician desactivados
+desactivarBtn(btnGuardar);
 
 function inicializar() {
     const usuarioGuardadoJson = localStorage.getItem('usuario');
@@ -65,10 +84,10 @@ function validarCorreo() {
 
     if ((inputCorreo.value.trim() === "") || (!expresionRegularCorreo.test(inputCorreo.value))) {
         mostrarError(inputCorreo, 'Correo no válido. Debe tener un @ y terminar en .com, .org o .net');
-        btnGuardar.classList.add("disabled-btn");
+        desactivarBtn(btnGuardar);
         esValido = false;
     } else {
-        btnGuardar.classList.remove("disabled-btn");
+        activarBtn(btnGuardar);
         limpiarError(inputCorreo);
     }
 }
@@ -80,8 +99,10 @@ function validarPassword() {
 
     if ((inputPassword.value.trim() === "") || (!expresionRegularPassword.test(inputPassword.value))) {
         mostrarError(inputPassword, 'La contraseña debe tener entre 8 y 12 caracteres, incluir mayuscula, minuscula, numero y al menos uno de estos caracteres especiales: # ? ! % $');
+        desactivarBtn(btnGuardar);
         esValido = false;
     } else {
+        activarBtn(btnGuardar);
         limpiarError(inputPassword);
     }
 }
@@ -105,7 +126,7 @@ function validarNombreApellido() {
 function validarTipoDocumento() {
     const valor = tipoDoc.value;
 
-    if (valor === "" || !["DNI", "CI", "PASAPORTE"].includes(valor)) {
+    if (valor === "" || !["dni", "ci", "pasaporte"].includes(valor)) {
         mostrarError(tipoDoc, "Selecciona un tipo de documento válido");
         esValido = false;
     } else {
@@ -182,21 +203,23 @@ function guardar(evento) {
 
         localStorage.setItem('usuario', usuarioJson);
 
-        alert("Registrado. Datos guardados");
+        // en este caso puedo imprimir la constante usuario con su contenido o usar getItem de localStorage
         console.log("Validado. Datos guardados: ", usuario);
+        console.log(localStorage.getItem('usuario'));
+        
     } else {
-        console.log("La validación fallida. Formulario no enviado");
+        console.log("Validación fallida. Formulario no enviado");
     }
 }
 
-inputCorreo.addEventListener("input", guardar);
-inputPassword.addEventListener("input", guardar);
-inputNombre.addEventListener("input", guardar);
-inputApellido.addEventListener("input", guardar);
-tipoDoc.addEventListener("change", guardar);
-inputNumeroDoc.addEventListener("input", guardar);
-inputFechaNac.addEventListener("input", guardar);
-inputTelefono.addEventListener("input", guardar);
+inputCorreo.addEventListener("input", null);
+inputPassword.addEventListener("input", null);
+inputNombre.addEventListener("input", guardar.bind(null));
+inputApellido.addEventListener("input", guardar.bind(null));
+tipoDoc.addEventListener("change", guardar.bind(null));
+inputNumeroDoc.addEventListener("input", guardar.bind(null));
+inputFechaNac.addEventListener("input", guardar.bind(null));
+inputTelefono.addEventListener("input", guardar.bind(null));
 
-btnGuardar.addEventListener("click", guardar);
+usarBtn();
 inicializar();
