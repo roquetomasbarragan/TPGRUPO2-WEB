@@ -95,3 +95,18 @@ p, label {
   font-weight: bold;
   color: #ccc;
 }
+
+.inicio{
+  font-family: "Cinzel";
+  color: #4E8AE9;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  text-decoration: none;
+}
+
+.inicio:hover{
+  background-color: lightblue;
+  border-radius: 25px;
+  width: fit-content;
+}
