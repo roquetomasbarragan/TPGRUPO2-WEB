@@ -12,7 +12,7 @@ buscador.addEventListener("input", () => {
 
         const nombre = articulo.querySelector(".item-valor-nombre").textContent.toLowerCase();
 
-        if(texto.length < 3){
+        if (texto.length < 3) {
             articulo.style.display = "block";
         } else {
             articulo.style.display = nombre.includes(texto) ? "block" : "none";
@@ -125,18 +125,18 @@ let index = 0;
 caption.textContent = images[0].dataset.nombre;
 
 function mostrarImagen() {
-  carousel.style.transform = `translateX(${-index * 100}%)`;
-  caption.textContent = images[index].dataset.nombre;
+    carousel.style.transform = `translateX(${-index * 100}%)`;
+    caption.textContent = images[index].dataset.nombre;
 }
 
 function siguiente() {
-  index = (index + 1) % images.length;
-  mostrarImagen();
+    index = (index + 1) % images.length;
+    mostrarImagen();
 }
 
 function anterior() {
-  index = (index - 1 + images.length) % images.length;
-  mostrarImagen();
+    index = (index - 1 + images.length) % images.length;
+    mostrarImagen();
 }
 
 // Eventos de botones
@@ -148,3 +148,42 @@ setInterval(siguiente, 4000);
 
 
 //fin carrousel//
+
+
+
+
+//enviar a favoritos
+//creación y ubicación del botón de favoritos
+
+let ubicacionClassBotonFavoritos = document.querySelectorAll(".header-articulo");
+
+ubicacionClassBotonFavoritos.forEach((ubicacion) => {
+    let spanDelBotonFavoritos = document.createElement("span");
+    let botonFavoritos = document.createElement("button");
+    botonFavoritos.classList.add("btn-favorito");
+    botonFavoritos.textContent = "❤️";
+    botonFavoritos.style.fontSize = "125%";
+    botonFavoritos.style.backgroundColor = "transparent";
+    spanDelBotonFavoritos.appendChild(botonFavoritos);
+
+    ubicacion.before(spanDelBotonFavoritos);
+
+    //hacemos que el botón envíe el item al localStorage
+    botonFavoritos.addEventListener("click", () => {
+        let tarjeta = botonFavoritos.closest("article");
+        let htmlTarjeta = tarjeta.outerHTML;
+
+        let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+        // evitar duplicados
+        if (favoritos.some(fav => fav === htmlTarjeta)) {
+            alert("Esta tarjeta ya está en favoritos.");
+            return;
+        }
+
+        favoritos.push(htmlTarjeta);
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+
+        alert("¡Tarjeta agregada a favoritos!");
+    });
+});
