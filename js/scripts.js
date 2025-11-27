@@ -83,78 +83,36 @@ tabs.forEach(tab => {
 
 
 // RATING
-// Espera a que todo el DOM esté cargado
-document.addEventListener("DOMContentLoaded", () => {
-    // Selecciona todos los elementos de rating que ya existen en el HTML
-    const ratingElements = document.querySelectorAll(".item-valor-rating");
+function convertirRatingsAEstrellas() {
 
-    // Función para generar estrellas
-    function generarEstrellas(valorRating) {
-        const maxEstrellas = 5;
-        let estrellas = '';
-        for (let i = 0; i < maxEstrellas; i++) {
-            estrellas += i < valorRating ? '★' : '☆';
-        }
-        return estrellas;
-    }
+    // Selecciona todos los elementos donde se muestra el rating
+    document.querySelectorAll(".item-valor-rating").forEach(el => {
 
-    // Recorre los elementos y reemplaza el número por estrellas
-    ratingElements.forEach(el => {
-        const valor = parseInt(el.textContent); // obtén el número
-        if (!isNaN(valor)) {
-            el.textContent = generarEstrellas(valor); // reemplaza por estrellas
+        // Obtiene el número que puso cargar-datos.js
+        const valor = parseInt(el.innerText.trim());
+
+        // Si es un número válido entre 1 y 5...
+        if (!isNaN(valor) && valor >= 1 && valor <= 5) {
+
+            // Reemplaza el número por estrellas: ★ llenas y ☆ vacías
+            el.innerHTML = "★".repeat(valor) + "☆".repeat(5 - valor);
         }
     });
+}
+
+// Cuando la página termina de cargar, convierte los ratings iniciales
+document.addEventListener("DOMContentLoaded", convertirRatingsAEstrellas);
+
+// Cuando el usuario cambia de categoría...
+document.querySelectorAll("a.tab-categoria").forEach(tab => {
+    tab.addEventListener("click", () => {
+
+        // Esperamos un instante a que cargar-datos.js coloque los números
+        // y luego volvemos a convertirlos en estrellas
+        setTimeout(convertirRatingsAEstrellas, 10);
+    });
+
 });
-
-// RATING
-document.addEventListener("DOMContentLoaded", () => {
-
-    // 1. Definimos la función que convierte números a estrellas
-    function generarEstrellas(valorRating) {
-        const maxEstrellas = 5;
-        let estrellas = '';
-        for (let i = 0; i < maxEstrellas; i++) {
-            estrellas += i < valorRating ? '★' : '☆';
-        }
-        return estrellas;
-    }
-
-    // 2. Definimos la lógica principal en una función reutilizable
-    function aplicarEstrellas() {
-        const ratingElements = document.querySelectorAll(".item-valor-rating");
-
-        ratingElements.forEach(el => {
-            // IMPORTANTE: Verificamos si ya tiene la clase "procesado" para no repetir el trabajo
-            if (el.classList.contains("procesado")) return;
-
-            const valor = parseInt(el.textContent); 
-            
-            if (!isNaN(valor)) {
-                el.textContent = generarEstrellas(valor); 
-                el.classList.add("procesado"); // Le ponemos una marca para saber que ya está listo
-            }
-        });
-    }
-
-    // 3. Ejecutamos la función inmediatamente (para la primera carga)
-    aplicarEstrellas();
-
-    // 4. Creamos un "Observador" que vigila cambios en la página
-    const observer = new MutationObserver((mutations) => {
-        // Si detecta cambios en el HTML (como cargar una nueva categoría), ejecuta la función de nuevo
-        aplicarEstrellas();
-    });
-
-    // 5. Conectamos el observador al cuerpo del documento
-    observer.observe(document.body, {
-        childList: true, // Avisar si se agregan hijos
-        subtree: true    // Avisar si cambian cosas dentro de los hijos (profundidad)
-    });
-});
-
-
-
 
 // CARROUSELL DE IMGS
 

@@ -57,6 +57,7 @@ body {
 }
 
 .iconos {
+   text-decoration: none;
    display: flex;
    gap: 20px;
    margin: 20px;
@@ -86,7 +87,7 @@ body {
    border: 2px solid black;
    border-radius: 8px;
    color: rgb(238, 238, 238);
-   background: linear-gradient(to top, #4E8AE9, rgb(26, 25, 25));
+   background: linear-gradient(to top, #4E8dE9, rgb(26, 25, 25));
    padding: 0 20px;
    border: 1px solid gray;
    transition: 2s ease;
@@ -127,7 +128,6 @@ body {
    text-align: center;
    color: #fff;
    box-shadow: 0 0 6px #4E8AE9;
-   width: 100%;
    max-width: 400px; 
    min-height: 300px; 
    transition: transform 0.3s, box-shadow 0.3s;

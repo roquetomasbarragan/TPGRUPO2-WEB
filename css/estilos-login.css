@@ -17,6 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 form {
@@ -112,4 +113,24 @@ h1{
     position: relative;
     top: 20px;
     background-color: #222222;
+}
+
+#volver_inicio {
+    position: absolute; 
+    top: 15px;          
+    right: 20px;        
+    cursor: pointer;
+}
+
+#volver_inicio a {
+    text-decoration: none; 
+    color: #fff;           
+    font-size: 24px;       
+    display: inline-block; 
+    font-weight: bold;     
+    transition: color 0.3s;
+}
+
+#volver_inicio a:hover {
+    color: #4E8AE9; 
 }

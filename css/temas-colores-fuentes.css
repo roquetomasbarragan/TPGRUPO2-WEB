@@ -6,12 +6,12 @@
 
 :root {
    --light-color-texto: #0a122a;
-   --light-color-fondo: #c9c5ba;
+   --light-color-fondo: #00adb5;
    --light-color-acento-1: #97b1a6;
    --light-color-acento-2: #698996;
    --light-color-acento-3: #407076;
    --dark-color-texto: #0a122a;
-   --dark-color-fondo: #00adb5;
+   --dark-color-fondo: #020202;
    --dark-color-acento-1: #935fa7;
    --dark-color-acento-2: #eeeeee;
    --dark-color-acento-3: #393e46;
