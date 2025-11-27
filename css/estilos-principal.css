@@ -337,3 +337,21 @@ body {
    
 }
 */
+
+.buscador-footer {
+   background-color: #222222;
+   color: #fff;
+   border-radius: 1.3em;
+   border: 1px solid #ffff;
+   width: 300px;
+   padding: 8px;
+   margin-bottom: 4%;
+   box-sizing: border-box;
+}
+
+.btn-footer {
+    height: 30px;
+    border-radius: 100%;
+    color: #fff;
+    background-color: #4E8AE9;
+}

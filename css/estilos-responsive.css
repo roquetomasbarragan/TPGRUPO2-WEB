@@ -23,7 +23,7 @@
     }
 }
 
-/* 📱 Para pantallas medianas (tablets) */
+/* Para pantallas medianas (tablets) */
 @media (max-width: 900px) {
  .carousel {
     width: 100%;
@@ -48,7 +48,7 @@
   }
 }
 
-/* 📱 Para pantallas chicas (celulares) */
+/* Para pantallas chicas (celulares) */
 @media (max-width: 600px) {
   .carousel {
     width: 100%;
