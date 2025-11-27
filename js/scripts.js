@@ -11,11 +11,13 @@ buscador.addEventListener("input", () => {
     articulos.forEach(articulo => {
 
         const nombre = articulo.querySelector(".item-valor-nombre").textContent.toLowerCase();
+        const autor = articulo.querySelector(".item-valor-autor").textContent.toLowerCase();
 
         if (texto.length < 3) {
             articulo.style.display = "block";
         } else {
             articulo.style.display = nombre.includes(texto) ? "block" : "none";
+            articulo.style.display = autor.includes(texto) ? "block" : "none";
         }
 
     })
@@ -189,4 +191,25 @@ ubicacionClassBotonFavoritos.forEach((ubicacion) => {
 
         alert("¡Tarjeta agregada a favoritos!");
     });
+});
+
+
+//Buscador footer
+const btn_buscar = document.querySelector(".btn-footer");
+const buscar_footer = document.querySelector(".buscador-footer");
+
+function ejecutarBusqueda() {
+    const textoABuscar = buscar_footer.value.toLowerCase().trim();
+
+    articulos.forEach(articulo => {
+        const nombre = articulo.querySelector(".item-valor-nombre").textContent.toLowerCase();
+        articulo.style.display = nombre.includes(textoABuscar) ? "block" : "none";
+    });
+}
+
+btn_buscar.addEventListener("click", ejecutarBusqueda);
+buscar_footer.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+        ejecutarBusqueda();
+    }
 });

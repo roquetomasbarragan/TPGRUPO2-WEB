@@ -1,9 +1,10 @@
 //esto toma el contenido del localstorage y lo inserta como html automatico
 //si el localstorage esta vacío o null muestra un texto indicando que no hay favoritos
+let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
     const seccionCategoria = document.getElementById("seccion-categoria");
-    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    const inputBuscador = document.getElementById("busqueda");
 
     if (favoritos.length === 0) {
         seccionCategoria.innerHTML = "<p>No hay favoritos agregados.</p>";
@@ -35,4 +36,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     renderFavoritos();
+
+    if (inputBuscador) {
+        inputBuscador.addEventListener("input", (e) => {
+        const texto = e.target.value.toLowerCase().trim();
+
+        const tarjetasRenderizadas = Array.from(seccionCategoria.children);
+
+        tarjetasRenderizadas.forEach(tarjeta => {
+            // Validación de seguridad por si el mensaje de "No hay favoritos" es un <p>
+            if (tarjeta.tagName !== "DIV") return; 
+
+            const nombreEl = tarjeta.querySelector(".item-valor-nombre");
+            const autorEl = tarjeta.querySelector(".item-valor-autor");
+
+            // Verificamos que existan los elementos antes de pedir .textContent
+            if (nombreEl && autorEl) {
+                const nombre = nombreEl.textContent.toLowerCase();
+                    const autor = autorEl.textContent.toLowerCase();
+
+                    const coincide = nombre.includes(texto) || autor.includes(texto);
+
+                    if (texto.length < 3) {
+                        tarjeta.style.display = "block";
+                    } else {
+                        tarjeta.style.display = coincide ? "block" : "none";
+                    }
+                }
+            });
+        });
+    }
 });
+
+
+
